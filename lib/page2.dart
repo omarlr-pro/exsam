@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 class page2 extends StatelessWidget {
   final String nom;
+  final String prenom;
+  final int age;
+
   const page2({
     Key? key,
     required this.nom,
+    required this.prenom,
+    required this.age,
   }) : super(key: key);
 
   @override
@@ -21,7 +26,7 @@ class page2 extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Center(
               child: Text(
-                'Bienvenue ${nom.toUpperCase()}',
+                'Bienvenue ${nom.toUpperCase()} ${prenom.toUpperCase()}, ${age < 18 ? "mineure" : "majeure"}',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
